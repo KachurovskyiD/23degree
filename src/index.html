@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>23Degree</title>
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body class="main_body">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__row">
+                    <div class="header__logo">
+                        <img src="images/logo.png" alt="logo" class="header__icon">
+                        <div class="header__name">Degree</div>
+                    </div>
+                    <div class="header__contacts">
+                        <img src="images/header_phone.png" alt="phone" class="header__img">
+                        <div class="header__phone">Есть вопросы? Звоните! <span>8 096 259 07 36</span></div>
+                    </div>
+                </div>
+                <div class="poster__row">
+                    <h1 class="poster__title">Услуги по 3D моделированию
+                        <span>полный спектр услуг</span></h1>
+                    <p class="poster__subtitle">Оставьте заявку сейчас и получите дизайн интерьера 25м<sup>2</sup>
+                        бесплатно!*</p>
+                </div>
+                <div class="form__row">
+                    <form action="POST" class="input-form">
+                        <input type="text" id="name" name="name" placeholder="Ваше имя" class="input-form__item"
+                            required>
+                        <input type="email" id="email" name="email" placeholder="E-mail" class="input-form__item"
+                            required>
+                        <input type="text" id="phone" name="phone" placeholder="Номер телефона" class="input-form__item"
+                            required>
+                        <button class="input-form__btn poster__btn">Оставить заявку!</button>
+                    </form>
+                </div>
+                <p class="sub-warranty">*Мы гарантируем конфидициальность передаваемых данных</p>
+                <img src="images/mouse.png" alt="scroll" class="header__scroll">
+            </div>
+        </header>
+        <div class="services">
+            <div class="container">
+                <div class="services__row">
+                    <div class="services__title title">Наши услуги</div>
+                    <div class="services__list">
+                        <div class="services__info">
+                            <p class="info__title">Дизайн интерьера</p>
+                            <p class="info__text">
+                                Услуга, направленная на разработку интерьеров помещений с целью обеспечить удобство и
+                                эстетически
+                                приятное ощущение у человека при нахождении в помещении</p>
+                        </div>
+                        <img src="images/services_1.png" alt="services" class="services__img">
+                        <img src="images/services_2.png" alt="services" class="services__img">
+                        <div class="services__info">
+                            <p class="info__title">Дизайн экстерьера</p>
+                            <p class="info__text">
+                                Услуга, направленная на разработку дизайна прилегающих элементов зданий, а также дизайн
+                                самих
+                                зданий,
+                                позволяющая обеспечить удобство людей при нахождении на территории</p>
+                        </div>
+                        <div class="services__info">
+                            <p class="info__title">Визуализация</p>
+                            <p class="info__text">
+                                Услуга, направленная на разработку дизайна прилегающих элементов зданий, а
+                                также
+                                дизайн
+                                самих зданий, позволяющая обеспечить удобство людей при нахождении на территории</p>
+                        </div>
+                        <img src="images/services_3.png" alt="services" class="services__img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="calculator">
+            <div class="container">
+                <div class="calculator__row">
+                    <div class="calculator__title">Расчитать стоимость</div>
+                    <div class="calculator__subtitle">Расчитайте предварительную стоимость разработки интерьера</div>
+                </div>
+                <div class="calculator__form">
+                    <div id="calculator__options">
+                        <div class="calculator__wrap calculator__area">
+                            <div class="options__title">Площадь помещения:</div>
+                            <ul class="range-list">
+                                <li class="range-list__item">100м<sup>2</sup></li>
+                                <li class="range-list__item">15 000м<sup>2</sup></li>
+                                <li class="range-list__item">30 000м<sup>2</sup></li>
+                                <li class="range-list__item">50 000м<sup>2</sup></li>
+                            </ul>
+                            <input type="range" id="range" min="100" max="50000" step="1" value="100">
+                        </div>
+                        <div class="calculator__wrap calculator__rate">
+                            <div class="options__title">Выберите пакет:</div>
+                            <div class="rates">
+                                <!-- add .rate-active for active rate -->
+                                <div id="rate__light" class="rate">Light
+                                    <div id="rate__light-hint" class="rate-hint">План расстановки мебели.
+                                        Часть рабочих чертежей (план полов, план потолка, план электросетей)
+                                    </div>
+                                </div>
+                                <div id="rate__medium" class="rate">Medium
+                                    <div id="rate__medium-hint" class="rate-hint">План расстановки мебели.
+                                        Все рабочие чертежи (план полов, план потолка, развертки по стенам, план
+                                        электросетей)
+                                    </div>
+                                </div>
+                                <div id="rate__full" class="rate">Full
+                                    <div id="rate__full-hint" class="rate-hint">План расстановки мебели, 3D
+                                        визуализация.
+                                        Все рабочие чертежи (план полов, план потолка, развертки по стенам, план
+                                        электросетей) и консультация дизайнера интерьера и экстерьера.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator__info">
+                        <div class="calculator__description">Площадь помещения:</div>
+                        <div class="area-value calculator__value">1 000</div>
+                        <div class="calculator__description">Средняя стоимость м2:</div>
+                        <div class="avg-value calculator__value">4 850</div>
+                        <div class="calculator__description">Средняя стоимость объекта:</div>
+                        <div class="total-value calculator__value"> 48 500</div>
+                        <button class="input-form__btn calculator__btn">Получить консультацию специалиста</button>
+                        <div class="calculator__callback">или позвоните нам по телефону:<br>
+                            <p>+ 38 096 259 07 36</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offer">
+            <div class="container">
+                <div class="offer__title title">Портфолио</div>
+                <div class="offer__row">
+                    <div class="offer__advantages">
+                        <div class="offer__advantages-title">Дизайн и архитектура</div>
+                        <p class="offer__advantages-text">
+                            &#9; Архитектурное и дизайнерское бюро <strong>23Degree</strong> — это динамично
+                            развивающаяся компания c
+                            опытом работы более 10 лет. На сегодняшний день мы смело можем заявить, что являемся
+                            успешной, опытной и ответственной
+                            платформой для реализации самых смелых и креативных архитектурных и дизайнерских идей.
+                            Выбирая нас, Вы получаете гарантию
+                            качества проектных работ и абсолютную уникальность Вашего будущего проекта дома, ресторана,
+                            квартиры.
+                        </p>
+                        <p class="offer__advantages-text">
+                            &#9; О способностях и возможностях компании наиболее красноречиво расскажет наше портфолио.
+                            Качественные работы ярко демонстрируют наши достижения в области
+                            проектирования и позволяют
+                            оценить качество предоставляемых услуг. Компания берется даже за самые сложные задачи и
+                            успешно реализует их по всей территории Украины.
+                        </p>
+                    </div>
+                    <div class="offer__slider">
+                        <div class="offer__slider-counter">
+                            <div class="offer__slider-prev">
+                                <img src="images/left.svg" alt="prev">
+                            </div>
+                            <span id="current">00</span>
+                            /
+                            <span id="total">00</span>
+                            <div class="offer__slider-next">
+                                <img src="images/right.svg" alt="next">
+                            </div>
+                        </div>
+                        <div class="offer__slider-wrapper">
+                            <div class="offer__slider-inner">
+                                <div class="offer__slide">
+                                    <img src="images/portfolio_1.jpg" alt="portfolio">
+                                </div>
+                                <div class="offer__slide">
+                                    <img src="images/portfolio_2.jpg" alt="portfolio">
+                                </div>
+                                <div class="offer__slide">
+                                    <img src="images/portfolio_3.jpg" alt="portfolio">
+                                </div>
+                                <div class="offer__slide">
+                                    <img src="images/portfolio_4.jpg" alt="portfolio">
+                                </div>
+                                <div class="offer__slide">
+                                    <img src="images/portfolio_5.jpg" alt="portfolio">
+                                </div>
+                                <div class="offer__slide">
+                                    <img src="images/portfolio_6.jpg" alt="portfolio">
+                                </div>
+                                <div class="offer__slide">
+                                    <img src="images/portfolio_7.jpg" alt="portfolio">
+                                </div>
+                                <!-- <div class="offer__slide">
+                                    <img src="images/portfolio_8.jpg" alt="portfolio">
+                                </div>
+                                <div class="offer__slide">
+                                    <img src="images/portfolio_9.jpg" alt="portfolio">
+                                </div>
+                                <div class="offer__slide">
+                                    <img src="images/portfolio_10.jpg" alt="portfolio">
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="container">
+                <div class="feature__title title">Почему мы лучшие?</div>
+                <div class="feature__row">
+                    <div class="feature__items">
+                        <div class="feature__item">
+                            <div class="feature__item-img"><img src="images/features_1.png" alt="features"></div>
+                            <p class="feature__item-text">Профессиональные дизайнеры и визуализаторы с зарубежной
+                                практикой работы</p>
+                        </div>
+                        <div class="feature__item">
+                            <div class="feature__item-img"><img src="images/features_2.png" alt="features"></div>
+                            <p class="feature__item-text">Интеративный подход, работаем до полного согласования с Вами
+                            </p>
+                        </div>
+                        <div class="feature__item">
+                            <div class="feature__item-img"><img src="images/features_3.png" alt="features"></div>
+                            <p class="feature__item-text">Решаем вопрос закупки, берем авторский надзор на себя (пакет
+                                Full)</p>
+                        </div>
+                        <div class="feature__item">
+                            <div class="feature__item-img"><img src="images/features_4.png" alt="features"></div>
+                            <p class="feature__item-text">Над проектом работает группа специалистов под началом project
+                                менеджера в ERP системе</p>
+                        </div>
+                        <div class="feature__item">
+                            <div class="feature__item-img"><img src="images/features_5.png" alt="features"></div>
+                            <p class="feature__item-text">Выполнение раньше установленных сроков</p>
+                        </div>
+                        <div class="feature__item">
+                            <div class="feature__item-img"><img src="images/features_6.png" alt="features"></div>
+                            <p class="feature__item-text">Дарим альбом проекта, вместе с 25% скидкой на следующее
+                                обращение</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="interaction">
+            <div class="container">
+                <div class="interaction__title title">Процесс взаимодействия</div>
+                <div class="interaction__row">
+                    <div class="card">
+                        <img src="images/connect_1.png" alt="interaction" class="interaction__img front">
+                        <div class="back">На первом этапе происходит наше знакомство. Мы расскажем вам о деталях работы
+                            над проектом, договоримся о встрече в
+                            удобное для вас время в нашей студии или на объекте. Выезжаем на замеры объекта по Запорожью
+                            или в Днепр, заключаем
+                            договор, обсуждаем и анкетируем (заполнение формы Технического Задания на проектирование),
+                            уточняем все пожелания и
+                            задачи .</div>
+                    </div>
+                    <div class="interaction__text">Заполнение брифа</div>
+                    <div class="interaction__text">Исследование</div>
+                    <div class="card">
+                        <img src="images/connect_2.png" alt="interaction" class="interaction__img front">
+                        <div class="back">Разработка планировочных решений, концепции в целом и эскизов будущего
+                            интерьера. Мы предложим оптимальный вариант
+                            решения поставленной задачи, разработаем и продемонстрируем 3D визуализации.</div>
+                    </div>
+                    <div class="card">
+                        <img src="images/connect_3.png" alt="interaction" class="interaction__img front">
+                        <div class="back">Подбор материалов. Подготовка технической части проекта.</div>
+                    </div>
+                    <div class="interaction__text">Идея</div>
+                    <div class="interaction__text">Завершение</div>
+                    <div class="card">
+                        <img src="images/connect_4.png" alt="interaction" class="interaction__img front">
+                        <div class="back">На этой стадии выполняются комплекты детализированных чертежей по всем
+                            разделам проекта, необходимых для выполнения
+                            строительных и монтажных работ.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="team">
+            <div class="container">
+                <div class="team__title title">Наша команда</div>
+                <div class="team__row">
+                    <div class="team__card">
+                        <img src="images/team_1.png" alt="team" class="team__photo">
+                        <div class="team__name">Ирина Притыкина</div>
+                        <div class="team__position">Директор компании</div>
+                    </div>
+                    <div class="team__card">
+                        <img src="images/team_2.png" alt="team" class="team__photo">
+                        <div class="team__name">Игорь Карий</div>
+                        <div class="team__position">Финансовый директор</div>
+                    </div>
+                    <div class="team__card">
+                        <img src="images/team_3.png" alt="team" class="team__photo">
+                        <div class="team__name">Илья Кондрашин</div>
+                        <div class="team__position">Инженер модельер</div>
+                    </div>
+                    <div class="team__card">
+                        <img src="images/team_4.png" alt="team" class="team__photo">
+                        <div class="team__name">Маргарита Гордеева</div>
+                        <div class="team__position">3D дизайнер</div>
+                    </div>
+                    <div class="team__card">
+                        <img src="images/team_5.png" alt="team" class="team__photo">
+                        <div class="team__name">Светлана Коток</div>
+                        <div class="team__position">Дизайнер интерьеров</div>
+                    </div>
+                    <div class="team__card">
+                        <img src="images/team_6.png" alt="team" class="team__photo">
+                        <div class="team__name">Максим Ковальский</div>
+                        <div class="team__position">Дизайнер ландшафтов</div>
+                    </div>
+                </div>
+                <div class="team__quote">
+                    <div class="team__quote-title">Ты - то, что ты делаешь!</div>
+                    <div class="team__quote-text">« На счастье человека влияет человек ...» Для нас довольный заказчик –
+                        это довольный сотрудник, а итог проделанный работы
+                        -это стимул двигаться дальше...</div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__title">Остались вопросы?</div>
+                <div class="footer__subtitle">Задайте их в форме ниже и наши специалисты свяжуться с Вами!</div>
+                <div class="footer__row">
+                    <div class="form__row">
+                        <form action="POST" class="footer-form">
+                            <input type="text" id="name" name="name" placeholder="Ваше имя" class="footer-form__item"
+                                required>
+                            <input type="email" id="email" name="email" placeholder="Ваш e-mail"
+                                class="footer-form__item" required>
+                            <input type="text" id="phone" name="phone" placeholder="Ваш номер телефона"
+                                class="footer-form__item" required>
+                            <textarea name="message" id="message" cols="30" rows="10" class="footer-form__item"
+                                placeholder="Ваше сообщение"></textarea>
+                            <button class="input-form__btn">Оставить заявку!</button>
+                        </form>
+                    </div>
+                    <div class="footer__contacts">
+                        <div class="footer__contacts-item">
+                            <div class="footer__contacts-ico">
+                                <img src="images/question_ico_phone.png" alt="question">
+                            </div>
+                            <div class="footer__contacts-text">+ 8 096 259 07 36</div>
+                        </div>
+                        <div class="footer__contacts-item">
+                            <div class="footer__contacts-ico">
+                                <img src="images/question_ico_wa.png" alt="question">
+                            </div>
+                            <div class="footer__contacts-text">+ 8 096 259 07 36</div>
+                        </div>
+                        <div class="footer__contacts-item">
+                            <div class="footer__contacts-ico">
+                                <img src="images/question_ico_mail.png" alt="question">
+                            </div>
+                            <div class="footer__contacts-text">23sales@gmail.com</div>
+                        </div>
+                        <div class="footer__contacts-item">
+                            <div class="footer__contacts-ico">
+                                <img src="images/question_ico_skype.png" alt="question">
+                            </div>
+                            <div class="footer__contacts-text">23degree</div>
+                        </div>
+                        <div class="footer__contacts-item">
+                            <div class="footer__contacts-ico">
+                                <img src="images/question_ico_telegram.png" alt="question">
+                            </div>
+                            <div class="footer__contacts-text">23degree</div>
+                        </div>
+                        <div class="footer__contacts-item">
+                            <div class="footer__contacts-text">График работы: с 9-00 до 18-00. Пн.-Пт.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d5355.564918904517!2d35.1324194!3d47.8438076!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1597054316398!5m2!1sru!2sua"
+                width="1920" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
