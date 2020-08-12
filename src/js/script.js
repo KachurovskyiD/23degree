@@ -1,4 +1,108 @@
 window.addEventListener('DOMContentLoaded', () => {
+
+    // Forms
+    function forms(formSelector) {
+
+        const forms = document.querySelectorAll(formSelector);
+
+        const message = {
+            success: 'Спасиб! Мы скоро свяжемся с Вами',
+            failure: 'Что-то пошло не так...'
+        };
+
+        forms.forEach(item => {
+            bindPostData(item);
+        });
+
+        const postData = async (url, data) => {
+            const res = await fetch(url, {
+                method: "POST",
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: data
+            });
+            return await res.json();
+        };
+
+        function bindPostData(form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const formData = new FormData(form);
+
+                const json = JSON.stringify(Object.fromEntries(formData.entries()));
+
+                postData('http://localhost:3000/requests', json)
+                    .then(data => {
+                        console.log(data);
+                        showThanksModal(message.success);
+                    })
+                    .catch(() => {
+                        showThanksModal(message.failure);
+                    })
+                    .finally(() => {
+                        form.reset();
+                    });
+            });
+        }
+
+        function showThanksModal(message) {
+            const prevModalDialog = document.querySelector('.modal');
+            const modalContent = document.querySelector('.modal__content');
+            prevModalDialog.classList.add('show');
+            modalContent.textContent = `${message}`;
+
+            setTimeout(() => {
+                prevModalDialog.classList.add('hide');
+                prevModalDialog.classList.remove('show');
+            }, 4000);
+        }
+    }
+
+    forms('form');
+
+    // Calc 
+    function calculator() {
+        const range = document.querySelector('#range'),
+            areaValue = document.querySelector('.area-value'),
+            avgValue = document.querySelector('.avg-value'),
+            totalValue = document.querySelector('.total-value'),
+            rate = document.querySelectorAll('.rate');
+
+        let areaValueRes,
+            ratio = 300;
+
+        function calcTotal() {
+            areaValueRes = range.value;
+            areaValue.innerHTML = `${areaValueRes} м<sup>2</sup>`;
+            totalValue.textContent = `${Math.round(areaValueRes * ratio)} грн`;
+            avgValue.textContent = `${Math.round(areaValueRes * ratio) / areaValueRes} грн`;
+        }
+
+        range.addEventListener('input', calcTotal);
+
+        function getStaticInformation() {
+            rate.forEach(elem => {
+                elem.addEventListener('click', (e) => {
+                    if (e.target.getAttribute('data-ratio')) {
+                        ratio = +e.target.getAttribute('data-ratio');
+                    }
+                    rate.forEach(item => {
+                        item.classList.remove('rate-active');
+                    });
+                    e.target.classList.add('rate-active');
+
+                    calcTotal();
+                });
+            });
+        }
+        getStaticInformation();
+    }
+
+    calculator();
+
+    // Slider
     function slider({
         container,
         slide,

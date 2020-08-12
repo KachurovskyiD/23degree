@@ -90,29 +90,29 @@
                         <div class="calculator__wrap calculator__area">
                             <div class="options__title">Площадь помещения:</div>
                             <ul class="range-list">
-                                <li class="range-list__item">100м<sup>2</sup></li>
-                                <li class="range-list__item">15 000м<sup>2</sup></li>
-                                <li class="range-list__item">30 000м<sup>2</sup></li>
-                                <li class="range-list__item">50 000м<sup>2</sup></li>
+                                <li class="range-list__item">10м<sup>2</sup></li>
+                                <li class="range-list__item">300м<sup>2</sup></li>
+                                <li class="range-list__item"> 600м<sup>2</sup></li>
+                                <li class="range-list__item">1 000м<sup>2</sup></li>
                             </ul>
-                            <input type="range" id="range" min="100" max="50000" step="1" value="100">
+                            <input type="range" id="range" min="10" max="1000" step="1" value="10">
                         </div>
                         <div class="calculator__wrap calculator__rate">
                             <div class="options__title">Выберите пакет:</div>
                             <div class="rates">
                                 <!-- add .rate-active for active rate -->
-                                <div id="rate__light" class="rate">Light
+                                <div data-ratio="300" id="rate__light" class="rate rate__light rate-active">Light
                                     <div id="rate__light-hint" class="rate-hint">План расстановки мебели.
                                         Часть рабочих чертежей (план полов, план потолка, план электросетей)
                                     </div>
                                 </div>
-                                <div id="rate__medium" class="rate">Medium
+                                <div data-ratio="450" id="rate__medium" class="rate rate__medium">Medium
                                     <div id="rate__medium-hint" class="rate-hint">План расстановки мебели.
                                         Все рабочие чертежи (план полов, план потолка, развертки по стенам, план
                                         электросетей)
                                     </div>
                                 </div>
-                                <div id="rate__full" class="rate">Full
+                                <div data-ratio="550" id="rate__full" class="rate rate__full">Full
                                     <div id="rate__full-hint" class="rate-hint">План расстановки мебели, 3D
                                         визуализация.
                                         Все рабочие чертежи (план полов, план потолка, развертки по стенам, план
@@ -124,12 +124,12 @@
                     </div>
                     <div class="calculator__info">
                         <div class="calculator__description">Площадь помещения:</div>
-                        <div class="area-value calculator__value">1 000</div>
+                        <div class="area-value calculator__value">0 м<sup>2</sup></div>
                         <div class="calculator__description">Средняя стоимость м2:</div>
-                        <div class="avg-value calculator__value">4 850</div>
-                        <div class="calculator__description">Средняя стоимость объекта:</div>
-                        <div class="total-value calculator__value"> 48 500</div>
-                        <button class="input-form__btn calculator__btn">Получить консультацию специалиста</button>
+                        <div class="avg-value calculator__value">0 грн</div>
+                        <div class="calculator__description">Полная стоимость объекта:</div>
+                        <div class="total-value calculator__value"> 0 грн</div>
+                        <a href="#footer" class="input-form__btn calculator__btn">Получить консультацию специалиста</a>
                         <div class="calculator__callback">или позвоните нам по телефону:<br>
                             <p>+ 38 096 259 07 36</p>
                         </div>
@@ -329,7 +329,7 @@
                 </div>
             </div>
         </div>
-        <footer class="footer">
+        <footer id="footer" class="footer">
             <div class="container">
                 <div class="footer__title">Остались вопросы?</div>
                 <div class="footer__subtitle">Задайте их в форме ниже и наши специалисты свяжуться с Вами!</div>
@@ -388,6 +388,11 @@
                 src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d5355.564918904517!2d35.1324194!3d47.8438076!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1597054316398!5m2!1sru!2sua"
                 width="1920" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
                 tabindex="0"></iframe>
+        </div>
+        <div class="modal">
+            <div class="modal__dialog">
+                <div class="modal__content"></div>
+            </div>
         </div>
     </div>
     <script src="js/script.js"></script>

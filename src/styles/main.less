@@ -801,6 +801,43 @@
 
 }
 
+.modal {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .5);
+
+    &__dialog {
+        max-width: 500px;
+        margin: 20% auto;
+    }
+
+    &__content {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        padding: 40px;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 4px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
 @media screen and (max-width: 1200px) {
     .title {
         font-size: 30px;
